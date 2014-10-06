@@ -1,9 +1,10 @@
 import java.util.Stack;
+import java.io.IOException;
 
 class IllC{
 	public static void main(String args[]){
 
-		String code = "++++[>+++++<-]>[<+++++>-]+<+[>[>+>+<<-]++>>[<<+>>-]>>>[-]++>[-]+>>>+[[-]++++++>>>]<<<[[<++++++++<++>>-]+<.<[>----<-]<]<<[>>>>>[>>>[-]+++++++++<[>-<-]+++++++++>[-[<->-]+[<<<]]<[>+<-]>]<<-]<<-]";
+		String code = ",+.";
 		System.out.println("Code length = " + code.length());
 		
 		int numberOfCells = 30000;
@@ -57,8 +58,15 @@ class IllC{
 					}
 					break;
 				case '.':
-					System.out.println(cells[indicator]);
+					System.out.println((char)cells[indicator]);
 					break;
+				case ',':
+					try{
+						cells[indicator] = (int) System.in.read();
+					}
+					catch (IOException e){
+						System.out.println("Erro na leitura de entrada do usuário");
+					}
 			}
 		}
 		System.out.println("Interpretation finished");

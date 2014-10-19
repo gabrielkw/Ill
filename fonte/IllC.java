@@ -1,13 +1,16 @@
-import java.util.Stack;
-import java.io.IOException;
-
 class IllC{
 	public static void main(String args[]){
 
-		String code = ",+.";
+		String codeToInterpret = "";
+		
+		Code codeToEval = new Code(codeToInterpret);
+		
+		IllArray cellArray = new IllArray(codeToEval, 30000);
+		
+		/*String code = "";
 		System.out.println("Code length = " + code.length());
 		
-		int numberOfCells = 30000;
+		int numberOfCells = 40000;
 		int indicator = 0;
 		int i;
 
@@ -58,17 +61,18 @@ class IllC{
 					}
 					break;
 				case '.':
-					System.out.println((char)cells[indicator]);
+					System.out.print((char)cells[indicator]);
 					break;
 				case ',':
 					try{
 						cells[indicator] = (int) System.in.read();
 					}
 					catch (IOException e){
-						System.out.println("Erro na leitura de entrada do usuário");
+						System.out.println("Erro na leitura de entrada do usuÃ¡rio");
 					}
 			}
-		}
+		}*/
+		System.out.println("");
 		System.out.println("Interpretation finished");
 	}
 }

@@ -6,10 +6,8 @@ public class Code{
 	private int instructionPointer;
 	
 	Code(String c){
-		code = c;
-		
-		instructionPointer = 0;
-		
+		code = c;	
+		instructionPointer = 0;		
 		matchingBrackets = new int[code.length()];
 		Stack<Integer> matchingBracketsStack = new Stack<Integer>();
 		int i;

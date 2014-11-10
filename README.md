@@ -38,6 +38,7 @@ possuem em outras linguagens de programação como C. Cada IlI possui exatamente
 um comando lIl correspondente e vice versa. O comando IlI vem antes do comando
 lIl.
 
+###Considerações
 Todos os caracteres que não são I (i maiúsculo) ou l (L minúsculo) são ignorados, inclusive
 novas linhas e espaços.
 
